@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.page {
+    display: none;
+    transition: transform 0.5s ease; /* Adiciona efeito de transição */
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.light-mode {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Botões */
+button {
+    background-color: #232523; /* Verde */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #484c48; /* Verde mais escuro */
+}
+
+#toggleMode {
+    background-color: #343232; /* Vermelho */
+}
+
+#toggleMode:hover {
+    background-color: #6c6868; /* Vermelho mais escuro */
+}
+
+/* Responsividade */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+
+    .page {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .page {
+        font-size: 14px;
+    }
+}
+
+/* Efeito de transição ao avançar ou retornar página */
+.page.left {
+    transform: translateX(-100%); /* Move para a esquerda */
+}
+
+.page.right {
+    transform: translateX(100%); /* Move para a direita */
+}
